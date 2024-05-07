@@ -1,0 +1,38 @@
+<!-- <template>
+    <template lwc:if={hasData}>
+      <table>
+        <thead>
+          <tr>
+            <th>Opportunity Name</th>
+            <th>Product Name</th>
+            <th>Quantity</th>
+            <th>Unit Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <template for:each={opportunities.data} for:item="opportunity">
+            <template for:each={opportunity.OpportunityLineItem} for:item="lineItem" >
+                <c-custom-row key={lineItem.Id}>
+              <tr>
+                <td>{opportunity.Name}</td>
+                <td>{lineItem.PricebookEntry.Name}</td>
+                <td>{lineItem.Quantity}</td>
+                <td>{lineItem.UnitPrice}</td>
+              </tr>
+            </c-custom-row>
+            </template>
+          </template>
+        </tbody>
+      </table>
+    </template>
+  </template> -->
+  <template >
+    <lightning-card title="Opportunity Line Items">
+        <lightning-datatable
+            key-field="Id"
+            data={lineItems}
+            columns={columns}
+            hide-checkbox-column
+        ></lightning-datatable>
+    </lightning-card>
+</template>

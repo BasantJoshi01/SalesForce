@@ -1,0 +1,20 @@
+<template>
+    <lightning-card title="Create Contact">
+     <lightning-record-form
+              object-api-name={objectApiName}
+              fields={fields}
+              layout="ContactEdit"
+              onsuccess={handleSuccess}>
+    <lightning-input label="First Name" onchange={handleFirstNameChange}></lightning-input>
+    <lightning-input label="Last Name" onchange={handleLastNameChange}></lightning-input>
+    <lightning-input label="Email" onchange={handleEmailChange}></lightning-input>
+    <lightning-record-picker
+            label="Account"
+            object-api-name="Account"
+            onrecordselection={handleAccountSelection}        
+    ></lightning-record-picker>
+     
+     
+    </lightning-record-form>
+    </lightning-card>
+    </template>
